@@ -1,0 +1,16 @@
+Logged in as <%= current_user.name %>
+<%= link_to "Log Out", session_path("current"), method: "delete" %>
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @book.author %>
+</p>
+
+<p><strong>Text:</strong>
+  <%= @book.total-@issue %></p>
+
+<%= link_to 'Back', books_path %>

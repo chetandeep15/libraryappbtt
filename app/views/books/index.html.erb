@@ -1,0 +1,19 @@
+<h1>Books List</h1>
+Logged in as <%= current_user.name %>
+<%= link_to "Log Out", session_path("current"), method: "delete" %>
+<br><br><br>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    
+  </tr>
+ 
+  <% @book.each do |book| %>
+    <tr>
+      <td><%= book.title %></td>
+      <td><%= book.author %></td>
+      <td><%= link_to 'Show Available', book_path(book) %></td>
+    </tr>
+  <% end %>
+</table>
