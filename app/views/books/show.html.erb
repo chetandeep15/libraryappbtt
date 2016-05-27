@@ -6,11 +6,11 @@ Logged in as <%= current_user.name %>
 </p>
  
 <p>
-  <strong>Text:</strong>
+  <strong>Author:</strong>
   <%= @book.author %>
 </p>
 
-<p><strong>Text:</strong>
+<p><strong>Currently Available:</strong>
   <%= @book.total-@issue %></p>
 
 <%= link_to 'Back', books_path %>
